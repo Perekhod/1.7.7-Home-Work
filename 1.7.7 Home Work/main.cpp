@@ -58,11 +58,23 @@ int main()
     IntOne.show();
     IntOne.insertToBeginning(50);   // Вставить элемент в начало контейнера.
     IntOne.show();
-    IntOne.insertToEnd(604);        // Вставить элемент в конец контейнера.
+    IntOne.insertToEnd(1604);        // Вставить элемент в конец контейнера.
     IntOne.show();
     IntOne.remove(0);               // Удалить элемент из контейнера.
     IntOne.show();
     IntOne.resize(5);               // Изменить размер контейнера.
+
+    Array<int> intArray(10);
+    Array<double> doubleArray(10);
+
+    for (int count = 0; count < intArray.getLength(); ++count)
+    {
+        intArray[count] = count;
+        doubleArray[count] = count + 0.5;
+    }
+
+    for (int count = intArray.getLength() - 1; count >= 0; --count)
+        std::cout << intArray[count] << "\t" << doubleArray[count] << '\n';
 
     return 0;
 }
